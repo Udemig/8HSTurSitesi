@@ -35,7 +35,6 @@ body {
 
 /*Özel Elemanlar*/
 
-
 .button {
   display: inline-block;
   color: var(--bg-color);
@@ -55,18 +54,17 @@ body {
   transform: translate(10px);
 }
 
-
-section{
-    padding: 70px 20px;
+section,footer {
+  padding: 70px 20px;
 }
 
-.main-text{
-    color: var(--main-color);
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    letter-spacing: 6px;
+.main-text {
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
 }
 /*Özel Elemanlar*/
 
@@ -82,6 +80,7 @@ header {
   width: 100%;
   top: 0;
   right: 0;
+  backdrop-filter: blur(35px);
 }
 
 .logo {
@@ -160,9 +159,6 @@ header {
   align-items: center;
 }
 
-
-
-
 .home-text h1 {
   font-size: var(--h1-font);
   font-weight: 800;
@@ -177,82 +173,248 @@ header {
   color: #979797;
 }
 
-
-
 /*Feature Alanı*/
 
-
-
-.feature-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,auto));
-    align-items: center;
-    justify-content: center;
-    gap:3rem
+.feature-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.row-img{
-    width: 100px;
-    height: 100px;
-    border-radius:50% ;
-    background-color: red;
-    overflow: hidden;
+.row-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  overflow: hidden;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-
-.row-img img{
-    width: 100%;
-    display: block;
-    cursor: pointer;
-    transition: var(--transition);
+.row-img img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.feature-content h4{
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    margin: 0 auto;
+.feature-content h4 {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 0 auto;
 }
 
-.row-img img:hover{
-    transform: scale(1.1);
+.row-img img:hover {
+  transform: scale(1.1);
 }
-
 
 /*Tatil Alanı*/
 
-.holiday{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10rem;
-    align-items: center;
+.holiday {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  align-items: center;
 }
 
-.holiday-img img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.holiday-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.holiday-text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content:center;
-    gap: 1rem;
+.holiday-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
 }
-
 
 /*Tatil Alanı*/
+
+/*Turlar Alanı Başlangıç*/
+
+.center-text {
+  text-align: center;
+}
+
+.center-text h2 {
+  font-size: var(--h2-font);
+  font-weight: 800;
+}
+
+.tour-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 3rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.box {
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: var(--transition);
+  filter: brightness(70%);
+}
+
+.box img:hover {
+  filter: brightness(90%) hue-rotate(50deg);
+}
+
+.box h6 {
+  position: absolute;
+  bottom: 95px;
+  left: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.box h4 {
+  position: absolute;
+  left: 25px;
+  bottom: 35px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.center-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/*Turlar Alanı Bitiş/
+
+/*Farklı Kültrüler Alanı Başlangıç*/
+.culture {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9rem;
+  align-items: center;
+}
+
+.culture-img img {
+  width: 100%;
+  max-width: 43rem;
+
+  max-height: 50rem;
+  height: auto;
+  border-radius: 10px;
+}
+
+.culture-text h2 {
+  font-size: var(--h2-font);
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.culture-text p {
+  font-size: var(--p-font);
+  color: #ffffffab;
+  margin-bottom: 35px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+/*Farklı Kültürler Alanı Bitiş*/
+
+
+/*Haberler Alanı Başlangıç*/
+.newsletter-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.newsletter-text h2{
+  font-size: var(--h2-font);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.newsletter-content form{
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 1rem;
+}
+
+.newsletter-content form input:first-child{
+
+background-color: #202020;
+ padding: 15px;
+ border-radius: 5px;
+ color: var(--text-color);
+}
+
+/*Haberler Alanı Bitiş*/
+
+
+/*Footer Alanı Başlangıç*/
+
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+  gap: 2rem;
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-col h3{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-col a{
+  color: #ffffffab;
+  transition: var(--transition);
+
+}
+
+.social a{
+  display: inline-flex;
+  background-color: #202020;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+border-radius: 50%;
+  margin: 10px;
+  font-size: 20px;
+}
+.footer-col a:hover{
+  transform: translateX(-5px);
+  color: var(--text-color);
+}
+
+
+
+
+/*Footer Alanı Bitiş*/
 
 
 
@@ -316,11 +478,26 @@ header {
   #menu-btn {
     display: block;
   }
+  .newsletter-content{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+
 }
 
-@media (max-width: 800px) {
+@media (max-width: 740px) {
+  .holiday {
+    grid-template-columns: 1fr;
+  }
 
-    .holiday{
-        grid-template-columns: 1fr;
-    }
+  .culture {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+  .newsletter-content form{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1rem;
+  }
 }
